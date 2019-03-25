@@ -44,7 +44,7 @@ body {
 }
 
 section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .box {
@@ -71,7 +71,7 @@ h1 {
 }
 
 h2 {
-    color: #fff;
+    color: #444;
     font-size: 180%;
     word-spacing: 2px;
     text-align: center;
@@ -82,6 +82,11 @@ h2 {
 h3 {
     font-size: 110%;
     margin-bottom: 15px;
+}
+
+h4, h5 {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 /* Line after h2? */
@@ -140,7 +145,7 @@ a:link,
 a:visited {
     color: #3498db;
     text-decoration: none;
-    padding-bottom: 1px;
+    /* padding-bottom: 1px; */
     border-bottom: 1px solid #3498db;
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
@@ -198,6 +203,25 @@ input[type=submit]:active {
     color: #fff;
 }
 
+.btn-small {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 5px;
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 100px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-small:hover,
+.btn-small:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #2980b9;    
+}
+
 /* ----------------------------------------------- */
 /* -------------------HEADER---------------------- */
 /* ----------------------------------------------- */
@@ -212,7 +236,8 @@ header {
 }
 
 .hero-text-box {
-    margin: 20vh 0;
+    margin: 30vh 0;
+    text-align: right;
     /* position: absolute; */
     /* width: 1140px;
     top: 50%;
@@ -222,11 +247,16 @@ header {
     transform: translate(-50%, -50%); */
 }
 
+nav {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0));
+}
+
 .logo {
-    height: 100px;
+    height: auto;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin-top: 32px;
+    margin-bottom: 50px;
 }
 
 /* Main navigation */
@@ -234,7 +264,7 @@ header {
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 35px;
 }
 
 .main-nav li {
@@ -268,7 +298,7 @@ header {
   max-width: 1000px;
   height: 60vh;
   position: relative;
-  margin: auto;
+  margin: 10vh auto;
   overflow: hidden;
 }
 
@@ -362,4 +392,20 @@ header {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* ----------------------------------------------- */
+/* -------------------PROJECTS-------------------- */
+/* ----------------------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.project-box {
+    text-align: center;
+    overflow: hidden;
+    height: 40vh;
 }
