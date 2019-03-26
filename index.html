@@ -11,8 +11,8 @@
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
 
-        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
          
     </head>
 
@@ -31,8 +31,8 @@
             </nav>
             <div class="row">
                 <div class="hero-text-box col span-1-of-3 box">
-                    <h1>Hi, I'm Levi.</h1>
-                    <h3>Developer & manager.</h3>
+                    <h1>Hi, I'm Levi!</h1>
+                    <h3>Engineer and Manager.</h3>
                     <a class="btn btn-full js--scroll-to-main" href="#">Projects</a>
                     <a class="btn btn-ghost js--scroll-to-contact" href="#">Contact</a>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides fade">
-                        <div class="numbertext">1 / 3</div>
+                            <div class="numbertext">1 / 3</div>
                             <img src="resources/img/gifferrebornexercise.png" style="width:100%">
                             <div class="text">Giffer Reborn: A virtual Arduino hardware coding platform.</div>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="mySlides fade">
                             <div class="numbertext">2 / 3</div>
                             <img src="resources/img/dmbproto.png" style="width:100%">
-                            <div class="text">Digital Music Box: A mechatronic song machine.</div>
+                            <div class="text">Digital Music Box: A mechatronic song composer.</div>
                         </div>
                         
                         <div class="mySlides fade">
@@ -92,7 +92,7 @@
                         <div class="project-box">
                             <img src="resources/img/dmbproto.png" alt="Digital Music Box">
                             <h4>Digital Music Box</h4>
-                            <h5>A mechatronic song machine.</h5>
+                            <h5>A mechatronic song composer.</h5>
                             <div>
                                 <a class="btn-small btn-full js--" href="#">Details</a>
                             </div>
@@ -110,6 +110,107 @@
                 </div>
             </div>
         </section>
+
+        <section class="section-project-gr">
+            <div class="row black-and-white">
+                <div class="col span-1-of-2 box">
+                    <!-- Trigger the Modal -->
+                    <img id="grConfigImg" src="resources/img/gifferrebornconfig.png" alt="Giffer Reborn Board Configuration" onClick="triggerModal(this.id)">
+
+                    <!-- The Modal -->
+                    <div id="grConfigImg-modal" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="grConfigImg-modalImg">
+
+                        <!-- Modal Caption (Image Text) -->
+                        <div id="grConfigImg-caption"></div>
+                    </div>
+
+                    <img id="grExerciseImg" src="resources/img/gifferrebornexercise.png" alt="Giffer Reborn Exercise Generator" onClick="triggerModal(this.id)">
+                    <div id="grExerciseImg-modal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="grExerciseImg-modalImg">
+                        <div id="grExerciseImg-caption">Caption</div>
+                    </div>
+                </div>
+                <div class="col span-1-of-2 box">
+                    <div class="project-feature-header">
+                        <h1>Giffer Reborn</h1>
+                        <h3>A virtual Arduino coding platform.</h3>
+                    </div>
+                    <div class="project-feature">
+                        <h4>Contributions:</h4>
+                        <ul>
+                            <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>400+ use to learn hardware programming</li>
+                            <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Simulates light/motor output and sensor input</li>
+                            <li><ion-icon name="checkbox-outline"></ion-icon>.gif renders from Javascript-intepreted C++</li>
+                            <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Generates exercises in 1 click with source code</li>
+                            <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Can be simply hosted through GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="project-feature">
+                        <h4>Tools:</h4>
+                        <ul>
+                            <li><ion-icon name="logo-javascript"></ion-icon></ion-icon>JS + Ace, JSCPP, Clipboard.js, and highlight.js</li>
+                            <li><ion-icon name="logo-css3"></ion-icon></ion-icon>CSS3 + Bootstrap</li>
+                            <li><ion-icon name="outlet"></ion-icon>Arduino Uno, Mega</li>
+                            <li><ion-icon name="logo-octocat"></ion-icon></ion-icon>GitHub Pages</li>
+                            <li><ion-icon name="logo-html5"></ion-icon>HTML5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-project-dmb">
+                <div class="row white-and-black">
+                    <div class="col span-1-of-2 box">
+                        <div class="project-feature-header">
+                            <h1>Digital Music Box</h1>
+                            <h3>A mechatronic song composer.</h3>
+                        </div>
+                        <div class="project-feature">
+                            <h4>Contributions:</h4>
+                            <ul>
+                                <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Allows for different notes, instruments, tempos.</li>
+                                <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Capacitavely senses movable metal pins.</li>
+                                <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>Mixes tracks with a MIDI sound module.</li>
+                                <li><ion-icon name="checkbox-outline"></ion-icon>Manages data with Arduino + Raspberry Pi.</li>
+                                <li><ion-icon name="checkbox-outline"></ion-icon></ion-icon>WIP: Touch-screen interface.</li>
+                            </ul>
+                        </div>
+                        <div class="project-feature">
+                            <h4>Tools:</h4>
+                            <ul>
+                                <li><ion-icon name="logo-python"></ion-icon></ion-icon>Python + Kivy</li>
+                                <li><ion-icon name="outlet"></ion-icon>Arduino Mega & Raspbery Pi + SlushEngine</li>
+                                <li><ion-icon name="cog"></ion-icon></ion-icon>200+ fabricated, COTS, and stock parts</li>
+                                <li><ion-icon name="flash"></ion-icon>ODrive motor, capactivate sensors, RGB LEDs</li>
+                                <li><ion-icon name="volume-high"></ion-icon></ion-icon>MIDI protocol</li>
+                            </ul>
+                        </div>
+                        </div>
+                    <div class="col span-1-of-2 box">
+                        <img id="dmbProtoImg" src="resources/img/dmbproto.png" alt="Digital Music Box Prototype" onClick="triggerModal(this.id)">
+                        <div id="dmbProtoImg-modal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="dmbProtoImg-modalImg">
+                            <div id="dmbProtoImg-caption"></div>
+                        </div>
+    
+                        <img id="dmbProtoImg" src="resources/img/dmbproto.png" alt="Digital Music Box Prototype" onClick="triggerModal(this.id)">
+                        <div id="dmbProtoImg-modal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="dmbProtoImg-modalImg">
+                            <div id="dmbProtoImg-caption"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         <section class="section-other js--section-other" id="other">
             <div class="row">            
@@ -130,6 +231,8 @@
         </footer>
 
         <script src="resources/js/script.js"></script>
+        <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
 
     </body>
 </html>
