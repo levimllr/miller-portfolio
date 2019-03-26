@@ -235,6 +235,7 @@ header {
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
+    color: #fff;
 }
 
 .hero-text-box {
