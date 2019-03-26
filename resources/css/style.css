@@ -59,8 +59,13 @@ h1,
 h2,
 h3 {
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     /* color: #fff; */
+    
+}
+
+h4, h4 {
+    text-transform: none;
 }
 
 h1 {
@@ -77,8 +82,19 @@ h2 {
     font-size: 180%;
     word-spacing: 2px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #2980b9;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 h3 {
@@ -416,7 +432,7 @@ nav {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot, .dot, .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
