@@ -165,7 +165,7 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: $('.js--section-project-ph').offset().top}, 1000);
   });
   $('.js--scroll-to-top').click(function () {
-    $('html, body').animate({scrollTop: $('.js--section-main').offset().top}, 1000);
+    $('html, body').animate({scrollTop: $('#header').offset().top}, 1000);
   });
   
   // Select all links with hashes
@@ -215,7 +215,6 @@ $(document).ready(function() {
       var nav = $('.main-nav');
       var icon = $('.js--nav-icon i');
       
-      
       nav.slideToggle(200);
       if (icon.hasClass('ion-md-menu')) {
           icon.addClass('ion-md-close');
@@ -232,6 +231,7 @@ $(document).ready(function() {
       
       if ($(window).width() < 768){
           nav.slideToggle(200);
+
       }
       
       if (icon.hasClass('ion-md-menu')) {
@@ -246,13 +246,16 @@ $(document).ready(function() {
   $(window).resize(function(){
       var nav = $('.js--main-nav');
       var icon = $('.js--nav-icon i');
+      var mobIcon = $('.mobile-nav-icon');
       
       if ($(window).width() > 767){
           nav.css("display", "block");
+          mobIcon.css("display", "none");
           icon.addClass('ion-md-close');
           icon.removeClass('ion-md-menu');
       } else {
           nav.css("display", "none");
+          mobIcon.css("display", "block");
           icon.addClass('ion-md-menu');
           icon.removeClass('ion-md-close');
       }

@@ -5,7 +5,14 @@
 /* Belize Hole Blue: #3498db */
 /* Peter River Blue: #2980b9 */
 
+:root {
+    --belize-hole-blue: #3498db;
+    --peter-river-blue: #54a0ff;
+  }
 
+
+/* 
+  #74b9ff */
 /* ----------------------------------------------- */
 /* -----------------BASIC SETUP------------------- */
 /* ----------------------------------------------- */
@@ -90,7 +97,7 @@ h2 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #2980b9;
+    background-color: var(--peter-river-blue);
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -133,13 +140,13 @@ h4, h5 {
 /* ----- ICONS ----- */
 ion-icon {
     font-size: 64px;
-      color: #3498db;
+      color: var(--belize-hole-blue);
   }
   
   .icon-big {
       font-size: 350%;
       display: block;
-      color: #3498db;
+      color: var(--belize-hole-blue);
       margin-bottom: 10px;
   }
   
@@ -147,7 +154,7 @@ ion-icon {
       display: inline-block;
       width: 30px;
       text-align: center;
-      color: #3498db;
+      color: var(--belize-hole-blue);
       font-size: 120%;
       margin-right: 10px;
       
@@ -161,10 +168,10 @@ ion-icon {
 
 a:link,
 a:visited {
-    color: #3498db;
+    color: var(--belize-hole-blue);
     text-decoration: none;
     /* padding-bottom: 1px; */
-    border-bottom: 1px solid #3498db;
+    border-bottom: 1px solid var(--belize-hole-blue);
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
@@ -183,7 +190,7 @@ input[type=submit] {
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
-    border-radius: 200px;
+    border-radius: 4px;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
@@ -191,33 +198,33 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-    background-color: #3498db;
-    border: 1px solid #3498db;
+    background-color: var(--belize-hole-blue);
+    border: 1px solid var(--belize-hole-blue);
     color: #fff;
     margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #3498db;
-    color: #3498db;
+    border: 1px solid var(--belize-hole-blue);
+    color: var(--belize-hole-blue);
 }
 
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #2980b9;
+    background-color: var(--peter-river-blue);
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #2980b9;
+    border: 1px solid var(--peter-river-blue);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #2980b9;
+    border: 1px solid var(--peter-river-blue);
     color: #fff;
 }
 
@@ -228,7 +235,7 @@ input[type=submit]:active {
     font-size: 80%;
     font-weight: 400;
     text-decoration: none;
-    border-radius: 100px;
+    border-radius: 4px;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
@@ -237,7 +244,7 @@ input[type=submit]:active {
 .btn-small:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #2980b9;    
+    background-color: var(--peter-river-blue);    
 }
 
 /* ----------------------------------------------- */
@@ -255,8 +262,10 @@ header {
 }
 
 .hero-text-box {
-    margin: 30vh 0;
-    text-align: right;
+    margin: 21%;
+    padding-left: 2%;
+    margin-right: 0px;
+    text-align: left;
     /* position: absolute; */
     /* width: 1140px;
     top: 50%;
@@ -276,6 +285,8 @@ nav {
     float: left;
     margin-top: 32px;
     margin-bottom: 50px;
+    margin-left: 32px;
+    cursor: pointer; 
 }
 
 /* Main navigation */
@@ -288,7 +299,7 @@ nav {
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .main-nav li a:link,
@@ -305,7 +316,26 @@ nav {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid var(--belize-hole-blue);
+}
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 24px;
+    margin-right: 38px;
+    cursor: pointer;
+    display: none;
+}
+
+.ion-md-menu {
+    font-size: 200%;
+    color: #fff;
+}
+
+.ion-md-close {
+    font-size: 200%;
+    color: #fff;
 }
 
 /* Sticky navigation */
@@ -340,6 +370,11 @@ nav {
 .sticky-black .logo,
 .sticky-white .logo {
     margin: 18px;
+}
+
+.sticky-black ion-icon,
+.sticky-white ion-icon {
+    margin: 0px;
 }
 
 .sticky-black .main-nav,
@@ -410,7 +445,7 @@ nav {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -439,6 +474,7 @@ nav {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
+  top: 85%;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -491,9 +527,14 @@ nav {
 /* -------------------PROJECTS-------------------- */
 /* ----------------------------------------------- */
 
+section {
+    height: 100vh;
+}
+
 .section-main {
     background-color: #eee;
     color: #333;
+    height: 100%;
 }
 
 .box img {
@@ -505,7 +546,7 @@ nav {
 .project-box {
     text-align: center;
     overflow: hidden;
-    height: 40vh;
+    height: 100%;
 }
 
 .white-and-black {
@@ -518,7 +559,7 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/gifferreborngif.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-attachment: fixed;
     color: #fff;
 }
@@ -528,7 +569,7 @@ nav {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(./img/dmbproto.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-attachment: fixed;
     color: #333;
 }
@@ -538,7 +579,7 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/pihabitsleds.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-attachment: fixed;
     color: #fff;
 }
@@ -574,7 +615,7 @@ nav {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #2980b9;
+    color: var(--peter-river-blue);
     font-size: 120%;
 
     /* secret alignment tricks! */
@@ -674,7 +715,7 @@ nav {
 
 .section-other {
     background-color: #eee;
-    height: 100vh;
+    /* height: 100vh; */
     color: #333;
 }
 
@@ -706,7 +747,7 @@ nav {
     display: inline-block;
     width: 30px;
     /* text-align: center; */
-    color: #2980b9;
+    color: var(--peter-river-blue);
     font-size: 120%;
 
     /* secret alignment tricks! */
@@ -742,7 +783,7 @@ nav {
     display: inline-block;
     width: 30px;
     text-align: center;
-    color: #2980b9;
+    color: var(--peter-river-blue);
     font-size: 120%;
 
     /* secret alignment tricks! */
@@ -809,7 +850,7 @@ nav {
 
 .section-contact a:link,
 .section-contact a:visited {
-    color: #2980b9;
+    color: var(--peter-river-blue);
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: none;
