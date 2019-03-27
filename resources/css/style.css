@@ -320,6 +320,7 @@ nav {
     /* Layer stacking! */
     z-index: 9999;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .sticky-white {
@@ -333,6 +334,7 @@ nav {
     /* Layer stacking! */
     z-index: 9999;
     color: #444;
+    transition: background-color 0.3s ease;
 }
 
 .sticky-black .logo,
@@ -356,6 +358,26 @@ nav {
 .sticky-white .main-nav li a:visited {
     color: #444;
 }
+
+/* .sticky-white { 
+    animation-name: wb;
+    animation-duration: 0.6s;
+  }
+
+.sticky-black { 
+    animation-name: bw;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes wb {
+    from {transform:background-color(#fff)} 
+    to {transform:background-color(#000)}
+  }
+
+  @keyframes bw {
+    from {transform:background-color(#000)} 
+    to {transform:background-color(#fff)}
+  } */
 
 /* .sticky .logo { display: none; }
 .sticky .logo-black { display: block; } */
@@ -739,18 +761,90 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/pihabitsleds.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 55vh;
     background-attachment: fixed;
     color: #fff;
+    text-align: left;
+}
+
+.section-contact ul {
+    list-style: none;
+}
+
+.section-contact li {
+    padding-top: 20px;
+}
+
+.section-contact ion-icon {
+    padding: 5px 4px;
+
+    /* secret alignment tricks */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -12px;
+    margin-right: 10px;
+}
+
+.contact-links {
+    white-space: nowrap;
+    margin-top: 30px;
+}
+
+.contact-links p {
+    display: inline;
+    font-size: 160%;
+}
+
+.contact-links ion-icon {
+    font-size: 200%;
 }
 
 .section-contact img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 50%;
-    margin-right: auto;
+    display: block;
     margin: auto auto;
+}
 
+.section-contact a:link,
+.section-contact a:visited {
+    color: #2980b9;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: none;
+}
+
+.section-contact li a:hover {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: none
+}
+
+.section-contact a:hover,
+.section-contact a:active {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+}
+
+.section-contact h3 {
+    display: inline;
+    font-size: 150%;
+}
+
+
+.linkedin:hover {
+    color: #0077B5;
+}
+
+.github:hover {
+    color: #fff;
+}
+
+.linkedin,
+.github {
+    transition: color 0.2s;
 }
 
 /* ----------------------------------------------- */
@@ -762,18 +856,22 @@ footer {
     color: #fff;
 }
 
-footer ul {
-    list-style: none;
+footer p {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-footer ion-icon {
-    padding: 5px 2px;
+.copyright {
+    margin: 6%;
+}
 
-    /* secret alignment tricks */
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
-    margin-right: 10px;
+.copyright p {
+    text-align: center;
+}
+
+/* 
+footer ul {
+    list-style: none;
 }
 
 footer a:link,
@@ -795,18 +893,6 @@ footer a:hover,
 footer a:active {
     color: #fff;
     border-bottom: 1px solid transparent;
-}
-
-.contact-links {
-    white-space: nowrap;
-}
-
-.contact-links p {
-    display: inline;
-}
-
-.contact-links ion-icon {
-    font-size: 125%;
 }
 
 .social-links ion-icon {
@@ -833,33 +919,9 @@ footer a:active {
     margin-top: -20px;
 }
 
-/* .footer-nav ion-icon:hover {
-    color: #fff;
-} */
-
 .footer-nav h1 {
     font-size: 280%;
     display: inline;
     vertical-align: -10%;
-}
+} */
 
-.copyright {
-    margin: 6%;
-}
-
-.copyright p {
-    text-align: center;
-}
-
-.linkedin,
-.github {
-    transition: color 0.2s;
-}
-
-.linkedin:hover {
-    color: #0077B5;
-}
-
-.github:hover {
-    color: #fff;
-}

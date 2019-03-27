@@ -1,12 +1,41 @@
 $(document).ready(function() {
     
   /* For the sticky navigation bar */
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop < 249) {
+      $('nav').removeClass('fadeOutUp');
+      $('nav').removeClass('animated');
+      $('nav').removeClass('sticky-black');
+    }
+  });
+
+  $('.js--section-main').waypoint(function(direction)  {
+    if (direction == "down") {
+        $('nav').removeClass('fadeOutUp');
+        $('nav').addClass('fadeInDown');
+        $('nav').addClass('animated');
+        $('nav').addClass('sticky-black');
+    } else { 
+        $('nav').removeClass('fadeInDown');
+        $('nav').addClass('fadeOutUp');
+        $('nav').addClass('animated');
+    } 
+  }, {
+      offset: '60px;'
+  });
+
   $('.js--section-main').waypoint(function(direction) {
-      if (direction == "down") {
-          $('nav').addClass('sticky-black');
-      } else {
-          $('nav').removeClass('sticky-black');
-      }
+    if (direction == "down") {
+        $('nav').removeClass('fadeOutUp');
+        $('nav').addClass('fadeInDown');
+        $('nav').addClass('animated');
+        $('nav').addClass('sticky-black');
+    } else { 
+        $('nav').removeClass('fadeInDown');
+        $('nav').addClass('fadeOutUp');
+        $('nav').addClass('animated');
+    } 
   }, {
       offset: '60px;'
   });
@@ -14,6 +43,8 @@ $(document).ready(function() {
   $('.js--section-project-gr').waypoint(function(direction) {
     if (direction == "down") {
         $('nav').removeClass('sticky-black');
+        // $('nav').removeClass('fadeInDown');
+        // $('nav').addClass('fadeIn');      
         $('nav').addClass('sticky-white');
     } else {
         $('nav').removeClass('sticky-white');
